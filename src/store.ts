@@ -11,9 +11,9 @@ export default new Vuex.Store({
    mutations: {
       setPosts(state, posts)
       {
-         console.log("OK.", posts);
+         console.log("MUTATION, posts are: ", posts);
          state.posts = posts;
-         console.log("POSTS: ", this.state);
+         console.log("state is now: ", state.posts);
       }
    },
 
@@ -24,7 +24,7 @@ export default new Vuex.Store({
             .fetchPosts()
             .then(posts =>
             {
-               console.log("ACTION:", posts);
+               console.log("ACTION, posts are: ", posts);
                commit('setPosts', posts)
             })
       }

@@ -33,10 +33,9 @@ export default {
   created () {
     this.loading = true
     this.$store.dispatch('fetchPosts')
-      .then(posts => {
-         console.log(posts);
+      .then(
         this.loading = false
-      })
+      )
   }
 }
 </script>
